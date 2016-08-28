@@ -1,0 +1,736 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  position: relative; }
+
+.reminder .lists {
+  width: 300px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: #383836;
+  overflow-y: auto; }
+  .reminder .lists .header {
+    width: 100%;
+    height: 44px;
+    border-bottom: 1px solid #1a1a1a; }
+    .reminder .lists .header .logo {
+      background-image: url("../imgs/packed-5.png");
+      background-position: 0px -588px;
+      background-repeat: no-repeat;
+      position: absolute;
+      width: 56px;
+      height: 16px;
+      top: 14px;
+      left: 12px; }
+    .reminder .lists .header .title {
+      position: absolute;
+      top: 0;
+      line-height: 44px;
+      left: 74px;
+      color: #999;
+      cursor: default;
+      font-size: 21px;
+      transition: all .5s ease; }
+      .reminder .lists .header .title:hover {
+        color: #ccc; }
+    .reminder .lists .header .jia {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 44px;
+      height: 44px;
+      cursor: pointer; }
+      .reminder .lists .header .jia .jia-icon {
+        width: 23px;
+        height: 23px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        background-image: url("../imgs/packed-5.png");
+        background-repeat: no-repeat;
+        background-position: -23px -526px; }
+  .reminder .lists .plan {
+    width: 100%;
+    height: 44px;
+    border-bottom: 1px solid #1a1a1a; }
+    .reminder .lists .plan .plan-icon {
+      position: absolute;
+      left: 10px;
+      top: 2px;
+      width: 40px;
+      height: 40px;
+      background: url("../imgs/packed-5.png") 0 -359px no-repeat; }
+    .reminder .lists .plan span {
+      color: white;
+      height: 44px;
+      line-height: 44px;
+      padding-left: 54px;
+      position: relative;
+      font-size: 17px; }
+    .reminder .lists .plan .xian {
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background: url("../imgs/packed-1.png"); }
+  .reminder .lists .inner li {
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    font-size: 17px;
+    color: #ffffff; }
+    .reminder .lists .inner li .color {
+      width: 44px;
+      height: 44px; }
+      .reminder .lists .inner li .color .color-icon {
+        width: 17px;
+        height: 17px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto; }
+      .reminder .lists .inner li .color .color-icon.green {
+        background: url("../imgs/packed-5.png") -85px -571px; }
+      .reminder .lists .inner li .color .color-icon.yellow {
+        background: url("../imgs/packed-5.png") -34px -571px; }
+      .reminder .lists .inner li .color .color-icon.blue {
+        background: url("../imgs/packed-5.png") -68px -571px; }
+      .reminder .lists .inner li .color .color-icon.orange {
+        background: url("../imgs/packed-5.png") -51px -571px; }
+      .reminder .lists .inner li .color .color-icon.purple {
+        background: url("../imgs/packed-5.png") -17px -571px; }
+      .reminder .lists .inner li .color .color-icon.brow {
+        background: url("../imgs/packed-5.png") -133px -549px; }
+      .reminder .lists .inner li .color .color-icon.pink {
+        background: url("../imgs/packed-5.png") -102px -571px; }
+    .reminder .lists .inner li input {
+      width: 250px;
+      height: 100%;
+      line-height: 44px;
+      color: #fff;
+      border: none;
+      outline: none;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      right: 0;
+      background: transparent;
+      font-size: 17px; }
+    .reminder .lists .inner li .xian {
+      position: absolute;
+      width: 85%;
+      height: 2px;
+      bottom: -2px;
+      right: 0;
+      background: url("../imgs/packed-1.png"); }
+  .reminder .lists .inner li.active {
+    background: #2d2d2b; }
+    .reminder .lists .inner li.active .xian {
+      display: none; }
+
+.reminder .content {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 300px;
+  right: 0;
+  background: url(../imgs/1.png);
+  overflow-y: auto; }
+  .reminder .content .header {
+    width: 100%;
+    height: 44px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.35);
+    line-height: 44px; }
+    .reminder .content .header .search {
+      width: 44px;
+      height: 44px;
+      position: absolute;
+      top: 0;
+      left: 0; }
+      .reminder .content .header .search .search-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 24px;
+        height: 24px;
+        background: url("../imgs/packed-5.png") -138px -359px; }
+    .reminder .content .header input {
+      width: 600px;
+      position: absolute;
+      top: 0;
+      left: 44px;
+      bottom: 0;
+      margin: auto;
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 18px;
+      color: #bbb; }
+  .reminder .content .content-inner {
+    width: 100%;
+    padding-left: 30px;
+    padding-top: 30px;
+    box-sizing: border-box; }
+    .reminder .content .content-inner .title {
+      width: 100%;
+      height: 60px; }
+      .reminder .content .content-inner .title h2 {
+        display: block;
+        font-size: 50px;
+        line-height: 48px;
+        font-weight: 100; }
+      .reminder .content .content-inner .title .button {
+        width: 48px;
+        height: 48px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 20px;
+        margin: auto;
+        text-align: center;
+        line-height: 48px;
+        font-size: 21px;
+        cursor: pointer; }
+      .reminder .content .content-inner .title .color-list {
+        width: 355px;
+        height: 226px;
+        position: absolute;
+        right: 55px;
+        top: -40px;
+        margin: auto;
+        background: white;
+        display: none;
+        z-index: 43234232321312312153453; }
+        .reminder .content .content-inner .title .color-list::before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: -4px;
+          left: -4px;
+          bottom: 0;
+          padding: 4px;
+          height: 100%;
+          width: 100%;
+          border-radius: 8px;
+          background: white;
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15), 0px 0px 1px 1px rgba(0, 0, 0, 0.1); }
+        .reminder .content .content-inner .title .color-list .color-inner {
+          z-index: 232142;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          box-sizing: border-box;
+          padding: 20px 0 0 20px;
+          border: 1px solid #ccc;
+          border-radius: 5px; }
+          .reminder .content .content-inner .title .color-list .color-inner input {
+            width: 314px;
+            height: 42px;
+            font-size: 25px;
+            outline: none;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            padding-left: 13px;
+            color: inherit; }
+          .reminder .content .content-inner .title .color-list .color-inner p {
+            color: black;
+            line-height: 55px;
+            padding-left: 3px; }
+          .reminder .content .content-inner .title .color-list .color-inner .color {
+            width: 314px;
+            height: 33px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid #ccc; }
+            .reminder .content .content-inner .title .color-list .color-inner .color li {
+              display: block;
+              width: 33px;
+              height: 33px;
+              margin: 4px 0px 0 4px;
+              float: left;
+              margin-left: 10px;
+              border-radius: 50%; }
+              .reminder .content .content-inner .title .color-list .color-inner .color li .sekuai {
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto; }
+            .reminder .content .content-inner .title .color-list .color-inner .color li:nth-child(1) .sekuai {
+              background: url("../imgs/stylesheet-1.png") 0px -256px; }
+            .reminder .content .content-inner .title .color-list .color-inner .color li:nth-child(2) .sekuai {
+              background: url("../imgs/stylesheet-1.png") 0px -306px; }
+            .reminder .content .content-inner .title .color-list .color-inner .color li:nth-child(3) .sekuai {
+              background: url("../imgs/stylesheet-1.png") 0px -281px; }
+            .reminder .content .content-inner .title .color-list .color-inner .color li:nth-child(4) .sekuai {
+              background: url("../imgs/stylesheet-1.png") 0px -381px; }
+            .reminder .content .content-inner .title .color-list .color-inner .color li:nth-child(5) .sekuai {
+              background: url("../imgs/stylesheet-1.png") 0px -231px; }
+            .reminder .content .content-inner .title .color-list .color-inner .color li:nth-child(6) .sekuai {
+              background: url("../imgs/stylesheet-1.png") 0px -331px; }
+            .reminder .content .content-inner .title .color-list .color-inner .color li:nth-child(7) .sekuai {
+              background: url("../imgs/stylesheet-1.png") 0px -356px; }
+            .reminder .content .content-inner .title .color-list .color-inner .color li.active.green {
+              border: 2px solid #49bf1f; }
+            .reminder .content .content-inner .title .color-list .color-inner .color li.active.yellow {
+              border: 2px solid #e0ac00; }
+            .reminder .content .content-inner .title .color-list .color-inner .color li.active.blue {
+              border: 2px solid #1badf8; }
+            .reminder .content .content-inner .title .color-list .color-inner .color li.active.orange {
+              border: 2px solid #ff7f00; }
+            .reminder .content .content-inner .title .color-list .color-inner .color li.active.purple {
+              border: 2px solid #b14bc9; }
+            .reminder .content .content-inner .title .color-list .color-inner .color li.active.brow {
+              border: 2px solid #a2845e; }
+            .reminder .content .content-inner .title .color-list .color-inner .color li.active.pink {
+              border: 2px solid #ff2968; }
+          .reminder .content .content-inner .title .color-list .color-inner .delete {
+            position: absolute;
+            font-size: 18px;
+            color: red;
+            bottom: 20px;
+            left: 20px;
+            cursor: pointer; }
+          .reminder .content .content-inner .title .color-list .color-inner .quxiao {
+            position: absolute;
+            font-size: 18px;
+            color: blue;
+            bottom: 20px;
+            left: 65%;
+            padding-right: 20px;
+            border-right: 1px solid #ccc;
+            cursor: pointer; }
+          .reminder .content .content-inner .title .color-list .color-inner .wangche {
+            cursor: pointer;
+            position: absolute;
+            font-size: 18px;
+            color: blue;
+            font-weight: bolder;
+            bottom: 20px;
+            right: 10px; }
+      .reminder .content .content-inner .title .xianshi {
+        display: block; }
+      .reminder .content .content-inner .title .xian {
+        position: absolute;
+        right: 0px;
+        bottom: -2px;
+        width: 100%;
+        height: 2px;
+        background: url("../imgs/packed-3.png"); }
+    .reminder .content .content-inner .title.green h2 {
+      color: #49bf1f; }
+    .reminder .content .content-inner .title.green .button {
+      color: #49bf1f; }
+    .reminder .content .content-inner .title.green .color-list input {
+      color: #49bf1f; }
+    .reminder .content .content-inner .title.yellow h2 {
+      color: #e0ac00; }
+    .reminder .content .content-inner .title.yellow .button {
+      color: #e0ac00; }
+    .reminder .content .content-inner .title.yellow .color-list input {
+      color: #e0ac00; }
+    .reminder .content .content-inner .title.blue h2 {
+      color: #1badf8; }
+    .reminder .content .content-inner .title.blue .button {
+      color: #1badf8; }
+    .reminder .content .content-inner .title.blue .color-list input {
+      color: #1badf8; }
+    .reminder .content .content-inner .title.orange h2 {
+      color: #ff7f00; }
+    .reminder .content .content-inner .title.orange .button {
+      color: #ff7f00; }
+    .reminder .content .content-inner .title.orange .color-list input {
+      color: #ff7f00; }
+    .reminder .content .content-inner .title.purple h2 {
+      color: #b14bc9; }
+    .reminder .content .content-inner .title.purple .button {
+      color: #b14bc9; }
+    .reminder .content .content-inner .title.purple .color-list input {
+      color: #b14bc9; }
+    .reminder .content .content-inner .title.brow h2 {
+      color: #a2845e; }
+    .reminder .content .content-inner .title.brow .button {
+      color: #a2845e; }
+    .reminder .content .content-inner .title.brow .color-list input {
+      color: #a2845e; }
+    .reminder .content .content-inner .title.pink h2 {
+      color: #ff2968; }
+    .reminder .content .content-inner .title.pink .button {
+      color: #ff2968; }
+    .reminder .content .content-inner .title.pink .color-list input {
+      color: #ff2968; }
+    .reminder .content .content-inner .Completed .header {
+      width: 100%;
+      height: 54px; }
+      .reminder .content .content-inner .Completed .header .header-icon {
+        width: 23px;
+        height: 23px;
+        background: url("../imgs/packed-5.png") -92px -526px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        left: 0; }
+      .reminder .content .content-inner .Completed .header .huan {
+        background: url("../imgs/packed-5.png") -69px -526px; }
+      .reminder .content .content-inner .Completed .header span {
+        line-height: 54px;
+        color: #aaa;
+        font-size: 19px;
+        margin-left: 35px; }
+      .reminder .content .content-inner .Completed .header .xian {
+        position: absolute;
+        right: 0px;
+        bottom: -2px;
+        width: 100%;
+        height: 2px;
+        background: url("../imgs/packed-3.png"); }
+    .reminder .content .content-inner .Completed li {
+      width: 100%;
+      height: 52px;
+      line-height: 52px;
+      font-size: 19px; }
+      .reminder .content .content-inner .Completed li .jiayige {
+        width: 100%;
+        height: 52px; }
+      .reminder .content .content-inner .Completed li .button {
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto; }
+      .reminder .content .content-inner .Completed li .button.green {
+        background: url("../imgs/packed-5.png") -32px -401px; }
+      .reminder .content .content-inner .Completed li .button.yellow {
+        background: url("../imgs/packed-5.png") -136px -199px; }
+      .reminder .content .content-inner .Completed li .button.blue {
+        background: url("../imgs/packed-5.png") -74px -359px; }
+      .reminder .content .content-inner .Completed li .button.orange {
+        background: url("../imgs/packed-5.png") -96px -465px; }
+      .reminder .content .content-inner .Completed li .button.purple {
+        background: url("../imgs/packed-5.png") 0 -465px; }
+      .reminder .content .content-inner .Completed li .button.brow {
+        background: url("../imgs/packed-5.png") -32px -433px; }
+      .reminder .content .content-inner .Completed li .button.pink {
+        background: url("../imgs/packed-5.png") -64px -401px; }
+      .reminder .content .content-inner .Completed li input {
+        width: 80%;
+        height: 100%;
+        border: none;
+        outline: none;
+        background: none;
+        margin-left: 50px;
+        font-size: 18px;
+        padding: 1px 0px;
+        color: #000;
+        z-index: 34;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50px;
+        margin: auto; }
+      .reminder .content .content-inner .Completed li .xian {
+        position: absolute;
+        right: 0px;
+        bottom: -2px;
+        width: 100%;
+        height: 2px;
+        background: url("../imgs/packed-3.png"); }
+      .reminder .content .content-inner .Completed li .delete {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        right: 40px;
+        line-height: 50px;
+        cursor: pointer; }
+      .reminder .content .content-inner .Completed li .shanchu {
+        width: 90px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        right: 40px;
+        line-height: 50px;
+        cursor: pointer;
+        z-index: 3423423423; }
+      .reminder .content .content-inner .Completed li .xianqin {
+        width: 355px;
+        height: 226px;
+        position: absolute;
+        top: 0px;
+        right: 120px;
+        background: white;
+        z-index: 10; }
+        .reminder .content .content-inner .Completed li .xianqin:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: -4px;
+          left: -4px;
+          bottom: 0;
+          padding: 4px;
+          height: 100%;
+          width: 100%;
+          border-radius: 8px;
+          background: white;
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15), 0px 0px 1px 1px rgba(0, 0, 0, 0.1); }
+        .reminder .content .content-inner .Completed li .xianqin .xianqin-inner {
+          position: absolute;
+          z-index: 10;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          box-sizing: border-box;
+          padding: 20px 0 0 20px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          z-index: 321323423423; }
+          .reminder .content .content-inner .Completed li .xianqin .xianqin-inner .delete {
+            position: absolute;
+            font-size: 18px;
+            color: red;
+            top: 150px;
+            left: 20px;
+            cursor: pointer;
+            font-weight: bolder; }
+          .reminder .content .content-inner .Completed li .xianqin .xianqin-inner .wangche {
+            cursor: pointer;
+            position: absolute;
+            font-size: 18px;
+            color: blue;
+            font-weight: bolder;
+            bottom: 20px;
+            right: 10px; }
+    .reminder .content .content-inner .Completed.green li .jiayige {
+      background: rgba(73, 191, 31, 0.1);
+      border-top: 1px solid #49bf1f;
+      border-bottom: 1px solid #49bf1f;
+      box-sizing: border-box; }
+    .reminder .content .content-inner .Completed.yellow li .jiayige {
+      background: rgba(73, 191, 31, 0.1);
+      border-top: 1px solid #e0ac00;
+      border-bottom: 1px solid #e0ac00;
+      box-sizing: border-box; }
+    .reminder .content .content-inner .Completed.blue li .jiayige {
+      background: rgba(73, 191, 31, 0.1);
+      border-top: 1px solid #1badf8;
+      border-bottom: 1px solid #1badf8;
+      box-sizing: border-box; }
+    .reminder .content .content-inner .Completed.orange li .jiayige {
+      background: rgba(73, 191, 31, 0.1);
+      border-top: 1px solid #ff7f00;
+      border-bottom: 1px solid #ff7f00;
+      box-sizing: border-box; }
+    .reminder .content .content-inner .Completed.purple li .jiayige {
+      background: rgba(73, 191, 31, 0.1);
+      border-top: 1px solid #b14bc9;
+      border-bottom: 1px solid #b14bc9;
+      box-sizing: border-box; }
+    .reminder .content .content-inner .Completed.brow li .jiayige {
+      background: rgba(73, 191, 31, 0.1);
+      border-top: 1px solid #a2845e;
+      border-bottom: 1px solid #a2845e;
+      box-sizing: border-box; }
+    .reminder .content .content-inner .Completed.pink li .jiayige {
+      background: rgba(73, 191, 31, 0.1);
+      border-top: 1px solid #ff2968;
+      border-bottom: 1px solid #ff2968;
+      box-sizing: border-box; }
+    .reminder .content .content-inner .noCompleted .header {
+      width: 100%;
+      height: 54px; }
+      .reminder .content .content-inner .noCompleted .header span {
+        line-height: 54px;
+        color: #aaa;
+        font-size: 19px;
+        margin-left: 35px; }
+      .reminder .content .content-inner .noCompleted .header .xian {
+        position: absolute;
+        right: 0px;
+        bottom: -2px;
+        width: 100%;
+        height: 2px;
+        background: url("../imgs/packed-3.png"); }
+    .reminder .content .content-inner .noCompleted li {
+      width: 100%;
+      height: 52px;
+      line-height: 52px;
+      font-size: 19px; }
+      .reminder .content .content-inner .noCompleted li .jiayige {
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 100%;
+        height: 52px; }
+      .reminder .content .content-inner .noCompleted li .button {
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto; }
+      .reminder .content .content-inner .noCompleted li .button.green {
+        background: url("../imgs/packed-5.png") -42px -359px; }
+      .reminder .content .content-inner .noCompleted li .button.yellow {
+        background: url("../imgs/packed-5.png") -136px -267px; }
+      .reminder .content .content-inner .noCompleted li .button.blue {
+        background: url("../imgs/packed-5.png") -136px -167px; }
+      .reminder .content .content-inner .noCompleted li .button.orange {
+        background: url("../imgs/packed-5.png") 0 -433px; }
+      .reminder .content .content-inner .noCompleted li .button.purple {
+        background: url("../imgs/packed-5.png") -64px -465px; }
+      .reminder .content .content-inner .noCompleted li .button.brow {
+        background: url("../imgs/packed-5.png") -96px -433px; }
+      .reminder .content .content-inner .noCompleted li .button.pink {
+        background: url("../imgs/packed-5.png") -128px -401px; }
+      .reminder .content .content-inner .noCompleted li input {
+        width: 80%;
+        height: 100%;
+        border: none;
+        outline: none;
+        background: none;
+        margin-left: 50px;
+        font-size: 18px;
+        padding: 1px 0px;
+        color: #000;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50px;
+        margin: auto; }
+      .reminder .content .content-inner .noCompleted li .xian {
+        position: absolute;
+        right: 0px;
+        bottom: -2px;
+        width: 100%;
+        height: 2px;
+        background: url("../imgs/packed-3.png"); }
+      .reminder .content .content-inner .noCompleted li .delete {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        right: 40px;
+        line-height: 50px;
+        cursor: pointer; }
+      .reminder .content .content-inner .noCompleted li .shanchu {
+        width: 90px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        right: 40px;
+        line-height: 50px;
+        cursor: pointer;
+        z-index: 3423423423; }
+      .reminder .content .content-inner .noCompleted li .xianqin {
+        width: 355px;
+        height: 226px;
+        position: absolute;
+        top: -40px;
+        right: 120px;
+        background: white;
+        z-index: 10; }
+        .reminder .content .content-inner .noCompleted li .xianqin:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: -4px;
+          left: -4px;
+          bottom: 0;
+          padding: 4px;
+          height: 100%;
+          width: 100%;
+          border-radius: 8px;
+          background: white;
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15), 0px 0px 1px 1px rgba(0, 0, 0, 0.1); }
+        .reminder .content .content-inner .noCompleted li .xianqin .xianqin-inner {
+          position: absolute;
+          z-index: 10;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          box-sizing: border-box;
+          padding: 20px 0 0 20px;
+          border: 1px solid #ccc;
+          border-radius: 5px; }
+          .reminder .content .content-inner .noCompleted li .xianqin .xianqin-inner .delete {
+            position: absolute;
+            font-size: 18px;
+            color: red;
+            top: 150px;
+            left: 20px;
+            cursor: pointer; }
+          .reminder .content .content-inner .noCompleted li .xianqin .xianqin-inner .wangche {
+            cursor: pointer;
+            position: absolute;
+            font-size: 18px;
+            color: blue;
+            font-weight: bolder;
+            bottom: 20px;
+            right: 10px; }
+    .reminder .content .content-inner .noCompleted.green li .jiayige {
+      background: rgba(73, 191, 31, 0.1);
+      border-top: 1px solid #49bf1f;
+      border-bottom: 1px solid #49bf1f;
+      box-sizing: border-box; }
+    .reminder .content .content-inner .noCompleted.yellow li .jiayige {
+      background: rgba(73, 191, 31, 0.1);
+      border-top: 1px solid #e0ac00;
+      border-bottom: 1px solid #e0ac00;
+      box-sizing: border-box; }
+    .reminder .content .content-inner .noCompleted.blue li .jiayige {
+      background: rgba(73, 191, 31, 0.1);
+      border-top: 1px solid #1badf8;
+      border-bottom: 1px solid #1badf8;
+      box-sizing: border-box; }
+    .reminder .content .content-inner .noCompleted.orange li .jiayige {
+      background: rgba(73, 191, 31, 0.1);
+      border-top: 1px solid #ff7f00;
+      border-bottom: 1px solid #ff7f00;
+      box-sizing: border-box; }
+    .reminder .content .content-inner .noCompleted.purple li .jiayige {
+      background: rgba(73, 191, 31, 0.1);
+      border-top: 1px solid #b14bc9;
+      border-bottom: 1px solid #b14bc9;
+      box-sizing: border-box; }
+    .reminder .content .content-inner .noCompleted.brow li .jiayige {
+      background: rgba(73, 191, 31, 0.1);
+      border-top: 1px solid #a2845e;
+      border-bottom: 1px solid #a2845e;
+      box-sizing: border-box; }
+    .reminder .content .content-inner .noCompleted.pink li .jiayige {
+      background: rgba(73, 191, 31, 0.1);
+      border-top: 1px solid #ff2968;
+      border-bottom: 1px solid #ff2968;
+      box-sizing: border-box; }
